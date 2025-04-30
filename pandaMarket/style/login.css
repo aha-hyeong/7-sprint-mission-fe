@@ -112,7 +112,6 @@ header {
   background: transparent;
   font-size: 1.6rem;
   border: none;
-  outline-color: #3692ff;
 }
 
 .password-eye-set {
@@ -122,6 +121,15 @@ header {
   height: 56px;
   border-radius: 12px;
   padding: 16px 24px;
+}
+
+.password-eye-set:focus-within {
+  border: 2px solid #3692ff;
+}
+
+.password-input {
+  outline: none;
+  border: none;
 }
 
 .icon {

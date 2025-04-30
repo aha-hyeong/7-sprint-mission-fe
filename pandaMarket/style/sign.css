@@ -99,7 +99,7 @@ input {
 }
 
 .password-eye-set,
-.password-eye-set2 {
+.password-check-eye-set {
   display: flex;
   position: relative;
   /* height: 56px; */
