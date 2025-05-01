@@ -28,8 +28,12 @@
               type="email"
               id="user-email"
               name="email"
-              placeholder="이메일을 입력해주세요"/>
-        </div>
+              placeholder="이메일을 입력해주세요"
+              autocomplete="email"/>
+            <span id="user-email-error">잘못된 이메일 형식입니다.</span>
+            </div>
+
+        
 
         <div class="password">
           <label for="user-password">비밀번호</label>
@@ -39,22 +43,19 @@
                 type="password"
                 id="user-password"
                 name="password"
-                minlength="5"
-                maxlength="8"
+                minlength="8"
                 required
-                placeholder="비밀번호를 입력해주세요" />
+                placeholder="비밀번호를 입력해주세요"
+                autocomplete="current-password" />
             <i class="fas fa-eye icon" id="togglePassword"></i>
           </div>
+          <span id="user-password-error">비밀번호를 8자 이상 입력해주세요.</span>
         </div>
         
 
-          <button 
-            type="submit" 
-            class="login-button" 
-            onclick="alert('로그인 실패!!')">
+          <button type="submit" class="login-button">
             로그인
           </button>
-
       </form>
 
         <section class="easy-login">

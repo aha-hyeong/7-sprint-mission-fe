@@ -1,3 +1,4 @@
+// 비밀번호 눈모양 토글 시작
 function setupPasswordToggle(inputId, toggleId) {
   const toggle = document.getElementById(toggleId);
   const input = document.getElementById(inputId);
@@ -12,4 +13,21 @@ function setupPasswordToggle(inputId, toggleId) {
 }
 
 setupPasswordToggle("user-password", "togglePassword");
-setupPasswordToggle("user-password-check", "togglePasswordCheck");
+// 비밀번호 눈모양 토글 끝
+
+// 이메일 및 비밀번호 유효성 검사 시작
+// 이메일 유효성
+const elInputUserEmail = document.querySelector("#user-email");
+const elEmailError = document.querySelector("#user-email-error");
+
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+elInputUserEmail.addEventListener("input", () => {
+  if (emailRegex.test(elInputUserEmail.value)) {
+    elInputUserEmail.style.outline = "2px solid #3692ff";
+    elEmailError.style.display = "none";
+  } else {
+    elInputUserEmail.style.outline = "2px solid #f74747";
+    elEmailError.style.display = "block";
+  }
+});
