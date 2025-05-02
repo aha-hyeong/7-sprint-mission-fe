@@ -216,7 +216,9 @@ header {
 
 /* 이메일, 비밀번호 유효성 검사 시작 */
 #user-email-error,
-#user-password-error {
+#user-email-empty-error,
+#user-password-error,
+#user-password-empty-error {
   color: #f74747;
   font-size: 15px;
   font-weight: 600;
