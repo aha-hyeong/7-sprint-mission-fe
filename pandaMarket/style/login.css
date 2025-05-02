@@ -158,8 +158,13 @@ header {
   line-height: 32px;
   background-color: #9ca3af;
   text-decoration-line: none;
-  cursor: pointer;
+  cursor: not-allowed;
   border: none;
+}
+
+.login-button:disabled {
+  background-color: #3692ff;
+  cursor: pointer;
 }
 
 .easy-login {

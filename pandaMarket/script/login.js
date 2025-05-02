@@ -53,7 +53,6 @@ elInputUserPassword.addEventListener("blur", () => {
     elPasswordEmptyError.style.display = "block";
     elPasswordError.style.display = "none";
   } else if (passwordValue.length < 8) {
-    console.log("비밀번호 8자 이하임");
     elInputUserPassword.parentElement.style.border = "2px solid #f74747";
     elPasswordEmptyError.style.display = "none";
     elPasswordError.style.display = "block";
@@ -63,3 +62,28 @@ elInputUserPassword.addEventListener("blur", () => {
     elPasswordError.style.display = "none";
   }
 });
+// 이메일 및 비밀번호 유효성 검사 끝
+
+//유효성 검사 후 로그인 버튼 활성화
+const elLoginButton = document.querySelector(".login-button");
+
+function activateLoginButton() {
+  const isEmailValid = emailRegex.test(elInputUserEmail.value.trim());
+  const isPasswordValid = elInputUserPassword.value.trim().length >= 8;
+
+  if (isEmailValid && isPasswordValid) {
+    elLoginButton.style.backgroundColor = "#3692ff";
+    elLoginButton.disabled = false;
+    elLoginButton.style.cursor = "pointer";
+    console.log("그래 이거지");
+  } else {
+    elLoginButton.style.backgroundColor = "#9ca3af";
+    elLoginButton.disabled = true;
+    elLoginButton.style.cursor = "not-allowed";
+    console.log("아직 아니야");
+  }
+}
+
+elInputUserEmail.addEventListener("blur", activateLoginButton);
+elInputUserPassword.addEventListener("input", activateLoginButton);
+//로그인 버튼 활성화 끝
