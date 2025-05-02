@@ -31,3 +31,17 @@ elInputUserEmail.addEventListener("input", () => {
     elEmailError.style.display = "block";
   }
 });
+
+// 비밀번호 유효성
+const elInputUserPassword = document.querySelector("#user-password");
+const elPasswordError = document.querySelector("#user-password-error");
+
+elInputUserPassword.addEventListener("input", () => {
+  if (elInputUserPassword.value.length >= 8) {
+    elInputUserPassword.parentElement.style.border = "2px solid #3692ff";
+    elPasswordError.style.display = "none";
+  } else {
+    elInputUserPassword.parentElement.style.border = "2px solid #f74747";
+    elPasswordError.style.display = "block";
+  }
+});
