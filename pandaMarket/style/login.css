@@ -219,7 +219,7 @@ header {
   color: #3692ff;
 }
 
-/* 이메일, 비밀번호 유효성 검사 시작 */
+/* 이메일, 비밀번호 유효성 검사 */
 #user-email-error,
 #user-email-empty-error,
 #user-password-error,

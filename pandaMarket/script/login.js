@@ -45,7 +45,7 @@ const elInputUserPassword = document.querySelector("#user-password");
 const elPasswordError = document.querySelector("#user-password-error");
 const elPasswordEmptyError = document.querySelector("#user-password-empty-error");
 
-elInputUserPassword.addEventListener("blur", () => {
+elInputUserPassword.addEventListener("input", () => {
   const passwordValue = elInputUserPassword.value.trim();
 
   if (passwordValue === "") {
@@ -75,15 +75,44 @@ function activateLoginButton() {
     elLoginButton.style.backgroundColor = "#3692ff";
     elLoginButton.disabled = false;
     elLoginButton.style.cursor = "pointer";
-    console.log("그래 이거지");
+    // console.log("그래 이거지");
   } else {
     elLoginButton.style.backgroundColor = "#9ca3af";
     elLoginButton.disabled = true;
     elLoginButton.style.cursor = "not-allowed";
-    console.log("아직 아니야");
+    // console.log("아직 아니야");
   }
 }
 
 elInputUserEmail.addEventListener("blur", activateLoginButton);
 elInputUserPassword.addEventListener("input", activateLoginButton);
-//로그인 버튼 활성화 끝
+
+// 로그인 제출(유효성 재검사, 유저 데이터 검증) + alret
+const USER_DATA = [
+  { email: "test@codeit.com", password: "12345678" },
+  { email: "codeit@codeit.com", password: "876554321" },
+];
+
+const form = document.querySelector(".login-form");
+const emailInput = document.querySelector("#user-email");
+const passwordInput = document.querySelector("#user-password");
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const email = emailInput.value.trim();
+  const password = passwordInput.value.trim();
+
+  const isEmailValid = emailRegex.test(email);
+  const isPasswordValid = password.length >= 8;
+
+  if (!isEmailValid || !isPasswordValid) return;
+
+  const foundUser = USER_DATA.find((user) => user.email === email);
+
+  if (!foundUser || foundUser.password !== password) {
+    alert("비밀번호가 일치하지 않습니다.");
+  } else {
+    window.location.href = "/items";
+  }
+});
