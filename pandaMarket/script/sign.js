@@ -34,7 +34,7 @@ elInputUserEmail.addEventListener("blur", () => {
     elEmailError.style.display = "block";
     elEmailEmptyError.style.display = "none";
   } else {
-    elInputUserEmail.style.outline = "2px solid #f74747";
+    elInputUserEmail.style.outline = "2px solid #3692ff";
     elEmailError.style.display = "none";
     elEmailEmptyError.style.display = "none";
   }
