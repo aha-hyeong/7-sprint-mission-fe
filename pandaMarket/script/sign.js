@@ -115,3 +115,29 @@ function updateSignButton() {
 elInputUserEmail.addEventListener("blur", updateSignButton);
 elInputUserPassword.addEventListener("input", updateSignButton);
 elInputUserPasswordCheck.addEventListener("input", updateSignButton);
+
+//회원가입 제출 + alret
+const USER_DATA = [
+  { email: "test@codeit.com", password: "12345678" },
+  { email: "codeit@codeit.com", password: "876554321" },
+];
+
+const form = document.querySelector(".sign-form");
+const emailInput = document.querySelector(".email-input");
+const passwordCheckInput = document.querySelector("#user-password-check");
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const email = emailInput.value.trim();
+  const password = passwordCheckInput.value.trim();
+
+  const foundUser = USER_DATA.find((user) => user.email === email);
+
+  if (foundUser) {
+    alert("사용 중인 이메일입니다.");
+  } else {
+    USER_DATA.push({ email: email, password: password });
+    window.location.href = "./login.html";
+  }
+});
