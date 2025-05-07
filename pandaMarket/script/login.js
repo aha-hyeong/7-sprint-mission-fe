@@ -73,14 +73,10 @@ function activateLoginButton() {
 
   if (isEmailValid && isPasswordValid) {
     elLoginButton.style.backgroundColor = "#3692ff";
-    elLoginButton.disabled = false;
     elLoginButton.style.cursor = "pointer";
-    // console.log("그래 이거지");
   } else {
     elLoginButton.style.backgroundColor = "#9ca3af";
-    elLoginButton.disabled = true;
     elLoginButton.style.cursor = "not-allowed";
-    // console.log("아직 아니야");
   }
 }
 
