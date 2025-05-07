@@ -93,3 +93,25 @@ elInputUserPasswordCheck.addEventListener("input", () => {
     elPasswordCheckError.style.display = "none";
   }
 });
+
+//회원가입 버튼 활성화
+const elsingButton = document.querySelector(".sign-button");
+
+function updateSignButton() {
+  const isEmailValid = emailRegex.test(elInputUserEmail.value.trim());
+  const isPasswordValid = elInputUserPassword.value.trim().length >= 8;
+  const isPasswordCheckValid =
+    elInputUserPasswordCheck.value.trim() === elInputUserPassword.value.trim();
+
+  if (isEmailValid && isPasswordValid && isPasswordCheckValid) {
+    elsingButton.style.backgroundColor = "#3692ff";
+    elsingButton.style.cursor = "pointer";
+  } else {
+    elsingButton.style.backgroundColor = "#9ca3af";
+    elsingButton.style.cursor = "not-allowed";
+  }
+}
+
+elInputUserEmail.addEventListener("blur", updateSignButton);
+elInputUserPassword.addEventListener("input", updateSignButton);
+elInputUserPasswordCheck.addEventListener("input", updateSignButton);
