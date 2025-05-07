@@ -188,7 +188,12 @@ input {
 }
 
 #user-email-error,
-#user-email-empty-error {
+#user-email-empty-error,
+#user-password-error,
+#user-password-empty-error,
+#user-password-check-error,
+#user-password-check-empty-error,
+#user-password-check-input-error {
   color: red;
   font-size: 15px;
   font-weight: 600;

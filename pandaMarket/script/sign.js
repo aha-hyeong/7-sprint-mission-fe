@@ -39,3 +39,57 @@ elInputUserEmail.addEventListener("blur", () => {
     elEmailEmptyError.style.display = "none";
   }
 });
+
+// 비밀번호 유효성 검사
+const elInputUserPassword = document.querySelector("#user-password");
+const elPasswordError = document.querySelector("#user-password-error");
+const elPasswordEmptyError = document.querySelector("#user-password-empty-error");
+const elInputUserPasswordCheck = document.querySelector("#user-password-check");
+const elPasswordCheckError = document.querySelector("#user-password-check-error");
+const elPasswordCheckEmptyError = document.querySelector("#user-password-check-empty-error");
+const elPasswordInputError = document.querySelector("#user-password-check-input-error");
+
+elInputUserPassword.addEventListener("input", () => {
+  const passwordValue = elInputUserPassword.value.trim();
+
+  if (passwordValue === "") {
+    elInputUserPassword.style.outline = "2px solid #f74747";
+    elPasswordEmptyError.style.display = "block";
+    elPasswordError.style.display = "none";
+  } else if (passwordValue.length < 8) {
+    elInputUserPassword.style.outline = "2px solid #f74747";
+    elPasswordEmptyError.style.display = "none";
+    elPasswordError.style.display = "block";
+  } else {
+    elInputUserPassword.style.outline = "2px solid #3692ff";
+    elPasswordEmptyError.style.display = "none";
+    elPasswordError.style.display = "none";
+  }
+});
+
+elInputUserPasswordCheck.addEventListener("input", () => {
+  const passwordValue = elInputUserPassword.value.trim();
+  const passwordCheckValue = elInputUserPasswordCheck.value.trim();
+
+  if (passwordCheckValue === "") {
+    elInputUserPasswordCheck.style.outline = "2px soilid #f74747";
+    elPasswordCheckEmptyError.style.display = "block";
+    elPasswordCheckError.style.display = "none";
+    elPasswordInputError.style.display = "none";
+  } else if (passwordCheckValue.length < 8) {
+    elInputUserPasswordCheck.style.outline = "2px solid #f74747";
+    elPasswordCheckEmptyError.style.display = "none";
+    elPasswordCheckError.style.display = "block";
+    elPasswordInputError.style.display = "none";
+  } else if (passwordCheckValue !== passwordValue) {
+    elInputUserPasswordCheck.style.outline = "2px solid #f74747";
+    elPasswordInputError.style.display = "block";
+    elPasswordCheckEmptyError.style.display = "none";
+    elPasswordCheckError.style.display = "none";
+  } else {
+    elInputUserPasswordCheck.style.outline = "2px solid #3692ff";
+    elPasswordInputError.style.display = "none";
+    elPasswordCheckEmptyError.style.display = "none";
+    elPasswordCheckError.style.display = "none";
+  }
+});
