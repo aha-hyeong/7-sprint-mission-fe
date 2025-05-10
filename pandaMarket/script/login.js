@@ -85,7 +85,7 @@ function activateLoginButton() {
 elInputUserEmail.addEventListener("blur", activateLoginButton);
 elInputUserPassword.addEventListener("input", activateLoginButton);
 
-// 로그인 제출(유효성 재검사, 유저 데이터 검증) + alret
+// 로그인 제출(유효성 재검사, 유저 데이터 검증) + alret(modal로 변경)
 const USER_DATA = [
   { email: "test@codeit.com", password: "12345678" },
   { email: "codeit@codeit.com", password: "876554321" },
@@ -96,6 +96,7 @@ const emailInput = document.querySelector("#user-email");
 const passwordInput = document.querySelector("#user-password");
 
 const modalWrapper = document.getElementById("modal-wrapper");
+const modalButton = document.getElementById("modal-button");
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
