@@ -14,7 +14,7 @@
     <div class="container">
       <header>
         <a href="./index.html" class="go-home">
-          <img class="panda-face" src="./images/home/panda-face.svg" alt="로고"></img>
+          <img class="panda-face" src="./images/home/panda-face.svg" alt="로고">
           <h1>판다마켓</h1>
         </a>
       </header>
@@ -81,6 +81,16 @@
         <a href="./sign.html" class="sign">회원가입</a>
       </div>
     </div>
+
+  <div id="modal-wrapper" class="hidden">
+    <div class="modal-overlay"></div>
+    <div id="modal" class="modal hidden">
+      <div class="modal-content">
+        <p class="modal-text">비밀번호가 일치하지 않습니다.</p>
+        <button id="modal-button">확인</button>
+      </div>
+    </div>
+  </div>
     <script src="./script/login.js"></script>
   </body>
 </html>

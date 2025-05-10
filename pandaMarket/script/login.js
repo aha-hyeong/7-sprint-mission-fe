@@ -74,9 +74,11 @@ function activateLoginButton() {
   if (isEmailValid && isPasswordValid) {
     elLoginButton.style.backgroundColor = "#3692ff";
     elLoginButton.style.cursor = "pointer";
+    elLoginButton.disabled = false;
   } else {
     elLoginButton.style.backgroundColor = "#9ca3af";
     elLoginButton.style.cursor = "not-allowed";
+    elLoginButton.disabled = true;
   }
 }
 
@@ -93,6 +95,8 @@ const form = document.querySelector(".login-form");
 const emailInput = document.querySelector("#user-email");
 const passwordInput = document.querySelector("#user-password");
 
+const modalWrapper = document.getElementById("modal-wrapper");
+
 form.addEventListener("submit", function (e) {
   e.preventDefault();
 
@@ -107,8 +111,13 @@ form.addEventListener("submit", function (e) {
   const foundUser = USER_DATA.find((user) => user.email === email);
 
   if (!foundUser || foundUser.password !== password) {
-    alert("비밀번호가 일치하지 않습니다.");
+    // alert("비밀번호가 일치하지 않습니다.");
+    modalWrapper.style.display = "flex";
   } else {
-    window.location.href = "/items";
+    window.location.href = "./items";
   }
+});
+
+modalButton.addEventListener("click", () => {
+  modalWrapper.style.display = "none";
 });

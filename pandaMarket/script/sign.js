@@ -106,9 +106,11 @@ function updateSignButton() {
   if (isEmailValid && isPasswordValid && isPasswordCheckValid) {
     elsingButton.style.backgroundColor = "#3692ff";
     elsingButton.style.cursor = "pointer";
+    elsingButton.disabled = false;
   } else {
     elsingButton.style.backgroundColor = "#9ca3af";
     elsingButton.style.cursor = "not-allowed";
+    elsingButton.disabled = true;
   }
 }
 
