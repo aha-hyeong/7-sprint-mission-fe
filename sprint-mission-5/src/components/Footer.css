@@ -1,0 +1,24 @@
+.bottom-footer {
+  display: flex;
+  align-items: flex-start;
+  height: 160px;
+  color: #e5e7eb;
+  background-color: #111827;
+  padding: 3.2rem 20rem;
+  font-size: 1.6rem;
+  justify-content: space-between;
+}
+
+.footer-center {
+  display: flex;
+  gap: 3rem;
+}
+
+.footer-right {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.footer-right img {
+  vertical-align: middle;
+}

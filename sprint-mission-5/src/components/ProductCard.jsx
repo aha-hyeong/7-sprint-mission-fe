@@ -1,10 +1,11 @@
-function ProductCard({ image, title, price, likes }) {
+function ProductCard() {
   return (
     <div>
-      <img src={image} alt={title} />
-      <h3>{title}</h3>
-      <p>{price}원</p>
-      <span className="jogaakrkdnfdaklsjdklfansmdnlakjdlkfajs;dljl"> ❤️가나다라마바사아자차카타파하 {likes}</span>
+      <p>여기는 main page</p>
+      <p>이것은 내용이 없다.</p>
+      <p>왜냐하면 작업을 하지 않았기 때문이다.</p>
+      <p>그렇다.</p>
+      <p>이것으로 우리는 작업을 하지 않으면 내용이 없다는 것을 알 수 있었다.</p>
     </div>
   );
 }
