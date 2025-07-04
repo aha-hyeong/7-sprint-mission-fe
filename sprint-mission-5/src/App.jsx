@@ -1,13 +1,14 @@
 import Header from './components/Header';
-import ProductCard from './components/ProductCard';
+import ProductList from './components/ProductList';
 import Footer from './components/Footer';
+import './App.css';
 
 function App() {
   return (
     <div className="app-container">
       <Header />
       <main className="main-content">
-        <ProductCard />
+        <ProductList />
       </main>
       <Footer />
     </div>

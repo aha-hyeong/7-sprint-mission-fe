@@ -1,11 +1,11 @@
-function ProductCard() {
+function ProductCard({ product }) {
   return (
-    <div>
-      <p>여기는 main page</p>
-      <p>이것은 내용이 없다.</p>
-      <p>왜냐하면 작업을 하지 않았기 때문이다.</p>
-      <p>그렇다.</p>
-      <p>이것으로 우리는 작업을 하지 않으면 내용이 없다는 것을 알 수 있었다.</p>
+    <div className="product-card">
+      <img src={product.images && product.images.length > 0 ? product.images[0] : 'https://via.placeholder.com/150'} alt={product.name} />
+      <div className="card-content">
+        <h3>{product.name}</h3>
+        <p className="price">{product.price.toLocaleString()}원</p>
+      </div>
     </div>
   );
 }
