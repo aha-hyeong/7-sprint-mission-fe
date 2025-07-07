@@ -1,0 +1,265 @@
+.container {
+  max-width: 1920px;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.main__top {
+  background-color: #cfe5ff;
+  height: 540px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.main__top__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+.main__top__text h2 {
+  font-size: 40px;
+  font-weight: 700;
+  color: #374151;
+}
+
+.products__link {
+  color: #f9fafb;
+  background-color: #3692ff;
+  padding: 16px 124px;
+  border-radius: 40px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.img__home__top {
+  align-self: flex-end;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.main__page__items {
+  display: flex;
+  flex-direction: column;
+  max-width: 1920px;
+  width: 100%;
+  justify-content: center;
+  gap: 138px;
+  margin-top: 138px;
+  margin-bottom: 138px;
+}
+
+.main__page__items span {
+  color: #3692ff;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.main__page__items h2 {
+  color: #374151;
+  font-size: 40px;
+  font-weight: 700;
+  margin-top: 12px;
+  margin-bottom: 24px;
+}
+
+.main__page__items h3 {
+  color: #374151;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.hot__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 64px;
+  box-sizing: border-box;
+  /* padding: 138px 344px; */
+}
+.hot__item img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hot__item__text,
+.search__item__text,
+.home__register__text {
+  min-width: 337px;
+}
+
+.search__items {
+  display: flex;
+  justify-content: center;
+  /* padding: 138px 344px; */
+}
+
+.search__item {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+}
+.search__item img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.search__item__text {
+  text-align: right;
+}
+
+.home__register {
+  display: flex;
+  max-width: 1920px;
+  justify-content: center;
+}
+.home__register__link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 64px;
+  box-sizing: border-box;
+  /* padding: 138px 344px; */
+}
+.home__register__link img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.main__bottom {
+  background-color: #cfe5ff;
+  display: flex;
+  max-width: 1920px;
+  height: 540px;
+  align-items: center;
+  justify-content: center;
+}
+
+.main__bottom__text h2 {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.img__home__bottom {
+  align-self: flex-end;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 1115px) {
+  .main__top {
+    flex-direction: column;
+    height: 770px;
+  }
+  .main__top__text {
+    margin-top: 84px;
+  }
+  .main__top__text h2 br {
+    display: none;
+  }
+  .img__home__top {
+    max-width: 744px;
+    align-self: auto;
+    margin-top: auto;
+  }
+  .main__bottom {
+    flex-direction: column;
+    height: 770px;
+  }
+  .main__bottom__text {
+    margin-top: 84px;
+    text-align: center;
+  }
+  .img__home__bottom {
+    max-width: 744px;
+    align-self: auto;
+    margin-top: auto;
+  }
+  .main__page__items {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    gap: 52px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .hot__items {
+    width: 100%;
+  }
+
+  .hot__item {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 24px;
+  }
+  .hot__item img {
+    width: 696px;
+    height: 526px;
+    max-width: 100%;
+    display: block;
+  }
+  .hot__item__text {
+    width: 100%;
+    /* align-self: flex-start; */
+    /* 여기 문제있음 */
+  }
+
+  .hot__item__text h2,
+  .search__item__text h2,
+  .home__register__text h2 {
+    font-size: 32px;
+    margin-top: 16px;
+    margin-bottom: 24px;
+  }
+
+  .hot__item__text br,
+  .search__item__text br,
+  .home__register__text br {
+    display: none;
+  }
+
+  .hot__item__text h3,
+  .search__item__text h3,
+  .home__register__text h3 {
+    font-size: 18px;
+  }
+  .search__item img,
+  .home__register__link img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .search__item {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 24px;
+  }
+
+  .search__item__text {
+    align-self: flex-end;
+  }
+
+  .home__register__link {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .home__register__text {
+    align-self: flex-start;
+  }
+}

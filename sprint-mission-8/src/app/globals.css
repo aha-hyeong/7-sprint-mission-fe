@@ -1,0 +1,31 @@
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+}
+/* 태그 스타일 */
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  min-height: 100vh;
+}
+
+main {
+  padding-bottom: 160px;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 100;
+}

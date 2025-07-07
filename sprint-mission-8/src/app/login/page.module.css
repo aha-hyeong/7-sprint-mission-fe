@@ -1,0 +1,129 @@
+/* ====== 인풋 및 패스워드 필드 통일 스타일 ====== */
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+  max-width: 640px;
+  width: 100%;
+}
+
+.input {
+  width: 100%;
+  padding: 16px 48px 16px 24px;
+  border: solid 2px rgba(49, 130, 246, 0);
+  background-color: #f3f4f6;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 400;
+  outline: none;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.passwordWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.passwordToggle {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  width: 2.4rem;
+  height: 2.4rem;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login__page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f9fa;
+}
+
+.login__container {
+  background: white;
+  padding: 48px 32px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.login__logo {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.login__logo a {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #3692ff;
+  font-size: 35px;
+  font-weight: 700;
+}
+
+.login__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login__button {
+  padding: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 8px;
+}
+
+.login__button:hover {
+  background-color: #0056b3;
+}
+
+.login__button:active {
+  transform: translateY(1px);
+}
+
+.signupLink {
+  text-align: center;
+  margin-top: 16px;
+  font-size: 14px;
+  color: #666;
+}
+
+.signupLink a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.signupLink a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .loginContainer {
+    padding: 32px 24px;
+    margin: 16px;
+  }
+
+  .login__logo a {
+    font-size: 20px;
+  }
+}
