@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>판다마켓 로그인</title>
+    <link rel="stylesheet" href="./style/login.css" />
+    <link rel="icon" href="./images/home/panda-face.svg" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <a href="./index.html" class="go-home">
+          <img class="panda-face" src="./images/home/panda-face.svg" alt="로고">
+          <h1>판다마켓</h1>
+        </a>
+      </header>
+
+      <nav class="login">
+      <form action="/login" method="post" class="login-form">
+        <div class="email">
+          <label for="user-email">이메일</label>
+            <input
+              class="email-input"
+              type="email"
+              id="user-email"
+              name="email"
+              placeholder="이메일을 입력해주세요"
+              autocomplete="email"/>
+            <span id="user-email-error">잘못된 이메일 형식입니다.</span>
+            <span id="user-email-empty-error">이메일을 입력해주세요.</span>
+            </div>
+
+        
+
+        <div class="password">
+          <label for="user-password">비밀번호</label>
+            <div class="password-eye-set">
+              <input
+                class="password-input"
+                type="password"
+                id="user-password"
+                name="password"
+                minlength="8"
+                required
+                placeholder="비밀번호를 입력해주세요"
+                autocomplete="current-password" />
+            <i class="fas fa-eye icon" id="togglePassword"></i>
+          </div>
+          <span id="user-password-error">비밀번호를 8자 이상 입력해주세요.</span>
+          <span id="user-password-empty-error">비밀번호를 입력해주세요.</span>
+        </div>
+        
+
+          <button type="submit" class="login-button">
+            로그인
+          </button>
+      </form>
+
+        <section class="easy-login">
+          <p>간편 로그인하기</p>
+            <div class="easy-login-right">
+              <a href="http://www.google.com" target="_blank">
+                <div class="google">
+                  <img src="./images/login/google.svg" alt="구글 로그인" class="google-icon"></img>
+                </div>
+              </a>
+              <a href="http://www.kakao.com/page/" target="_blank">
+                <div class="kakaoTalk">
+                  <img src="./images/login/kakaoTalk.svg" alt="카카오 로그인"></img>
+                </div>
+              </a>
+            </div>
+        </section>
+      </nav>
+      <div class="sign-up">
+        <p>판다마켓이 처음이신가요?</p>
+        <a href="./sign.html" class="sign">회원가입</a>
+      </div>
+    </div>
+
+  <div id="modal-wrapper" class="hidden">
+    <div class="modal-overlay"></div>
+    <div id="modal" class="modal hidden">
+      <div class="modal-content">
+        <p class="modal-text">비밀번호가 일치하지 않습니다.</p>
+        <button id="modal-button">확인</button>
+      </div>
+    </div>
+  </div>
+    <script src="./script/login.js"></script>
+  </body>
+</html>

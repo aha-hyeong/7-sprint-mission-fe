@@ -1,0 +1,51 @@
+.market__form {
+  display: flex;
+  max-width: 1200px;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 24px 24px;
+}
+
+.market__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.market__submit {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.market__submit h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.market__input {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+}
+
+.market__description {
+  height: 282px;
+  resize: none;
+}
+
+.Button {
+  padding: 12px 23px;
+  border-radius: 8px;
+  background-color: #9ca3af;
+  height: 42px;
+  transition: background 0.2s;
+}
+
+.Button:enabled {
+  background-color: #3692ff;
+  color: #fff;
+}

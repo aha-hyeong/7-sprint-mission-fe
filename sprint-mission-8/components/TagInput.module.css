@@ -1,0 +1,76 @@
+.label {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 1.6rem;
+  display: block;
+}
+
+.required {
+  color: #f74747;
+  margin-left: 0.4rem;
+  font-size: 1.4rem;
+  display: inline;
+}
+.tagInput {
+  width: 100%;
+  padding: 1.6rem 2.4rem;
+  border: solid 2px rgba(49, 130, 246, 0);
+  background-color: #f3f4f6;
+  border-radius: 1.2rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  outline: none;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.tagInput:focus {
+  border-color: #3692ff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.tagInput.error {
+  border-color: #f74747;
+}
+
+.tagInput.success {
+  border-color: #3692ff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.tagInput.error:focus {
+  box-shadow: 0 0 0 2px rgba(255, 68, 68, 0.25);
+}
+
+.tags {
+  margin-top: 0.8rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tagChip {
+  display: inline-flex;
+  align-items: center;
+  background: #f0f0f0;
+  border-radius: 1.2rem;
+  padding: 0.3rem 1rem;
+  font-size: 1.4rem;
+  color: #333;
+}
+
+.removeBtn {
+  margin-left: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.4rem;
+  color: #888;
+}
+
+.error {
+  color: #e74c3c;
+  font-size: 1.3rem;
+  margin-top: 0.3rem;
+}
