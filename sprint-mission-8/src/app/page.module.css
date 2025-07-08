@@ -213,6 +213,7 @@
   }
   .hot__item__text {
     width: 100%;
+    /* margin: 0 auto; */
     /* align-self: flex-start; */
     /* 여기 문제있음 */
   }
