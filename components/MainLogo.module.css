@@ -1,0 +1,21 @@
+.mainLogo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8.5px;
+}
+
+.mainText {
+  color: #3692ff;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.header .mainText {
+  font-size: 25px;
+}
+
+.auth .mainText {
+  font-size: 60px;
+  margin-top: 10px;
+}

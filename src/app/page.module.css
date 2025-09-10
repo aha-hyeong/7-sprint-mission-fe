@@ -1,0 +1,50 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.banner {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  max-width: 1920px;
+  background-color: #cfe5ff;
+  width: 100vw;
+  height: 540px;
+}
+
+.wrapper {
+  align-self: center;
+}
+
+.mainLogo {
+  align-self: flex-end;
+}
+
+.pillButton {
+  display: flex;
+  color: white;
+  padding: 16px 124px;
+  background-color: #3692ff;
+  border-radius: 40px;
+}
+
+.feature {
+  display: flex;
+  flex-direction: row;
+  margin-top: 138px;
+  justify-content: center;
+  max-width: 1920px;
+  width: 100vw;
+  gap: 64px;
+}
+
+.featureContent {
+  align-self: center;
+}
+
+.bottomBanner {
+  margin-top: 138px;
+}

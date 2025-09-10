@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0px 200px 9px 200px;
+}
+
+.loginBtn {
+  color: white;
+  padding: 12px 23px;
+  background-color: #3692ff;
+  border-radius: 8px;
+}

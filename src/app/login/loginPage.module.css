@@ -1,0 +1,88 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.submitForm {
+  display: flex;
+  flex-direction: column;
+  max-width: 640px;
+  width: 100vw;
+}
+
+.labelFont {
+  font-weight: 600;
+}
+
+.inputBox {
+  all: unset;
+  background-color: #f3f4f6;
+  padding: 16px 24px;
+  margin-top: 16px;
+  margin-bottom: 24px;
+  border-radius: 12px;
+}
+
+.loginBtn {
+  color: white;
+  display: flex;
+  justify-content: center;
+  background-color: #9ca3af;
+  padding: 16px 124px;
+  border-radius: 40px;
+  cursor: not-allowed;
+}
+
+.loginBtnActive {
+  color: white;
+  display: flex;
+  justify-content: center;
+  background-color: #3692ff; /* 활성화 색상 (파란색) */
+  padding: 16px 124px;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+.oathLogin {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 24px 0;
+  padding: 16px 23px;
+  background-color: #e6f2ff;
+  border-radius: 8px;
+  max-width: 640px;
+  width: 100vw;
+}
+
+.oathLoginArea {
+  display: flex;
+  gap: 16px;
+}
+
+.signUpArea {
+  display: flex;
+  gap: 8px;
+  max-width: 640px;
+  justify-content: center;
+}
+
+.signUpBtn {
+  color: #3692ff;
+}
+
+.error {
+  color: red;
+  font-weight: 500;
+  font-size: 14px;
+  margin-top: -22px;
+  margin-bottom: 15px;
+  margin-left: 10px;
+}
+
+.inputError {
+  border: 1px solid red;
+}
